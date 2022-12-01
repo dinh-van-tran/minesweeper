@@ -5,10 +5,6 @@ class Board(private val numberOfRows: Int, private val numberOfColumns: Int, var
 
     var isSolved: Boolean = false
         get() {
-//            if (numberOfMines == 0) {
-//                return true
-//            }
-//
             var numberOfExploredCell = 0
             var remainingCellHasMine = numberOfMines
 
@@ -125,9 +121,7 @@ class Board(private val numberOfRows: Int, private val numberOfColumns: Int, var
 
         for (rowIndex in 0 until numberOfRows) {
             print("${rowIndex + 1}|")
-//            for (cell in rows[rowIndex]) {
-            for (columnIndex in 0 until numberOfColumns) {
-                val cell = rows[rowIndex][columnIndex]
+            for (cell in rows[rowIndex]) {
                 print(cell)
             }
             print('|')
